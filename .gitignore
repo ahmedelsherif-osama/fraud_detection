@@ -1,0 +1,15 @@
+# Python env
+venv/
+__pycache__/
+*.pyc
+
+# Data & artifacts
+data/
+artifacts/
+*.csv
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS files
+.DS_Store

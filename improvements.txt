@@ -1,0 +1,8 @@
+Improvement notes for production:
+1. Add raise FileNotFound/Value errors pretty much everywhere.
+2. Add a global error handler
+3. Add logging
+4. Add security (Authentication, Authorization)
+5. Monitoring
+6. ChatGPT notes
+7. etc.
