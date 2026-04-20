@@ -1,5 +1,36 @@
 # Fraud Detection Pipeline
 
+## Live Demo
+
+API Documentation (Swagger UI):  
+https://fraud-detection-api-q77a.onrender.com/docs
+
+### Example Request
+
+**POST** `/predict`
+
+```json
+{
+  "Time": 10000,
+  "V1": -1.35,
+  "V2": -0.07,
+  "V3": 2.53,
+  "Amount": 149.62
+}
+```
+
+### Example Response
+
+```json
+{
+  "fraud_probability": 0.87,
+  "fraud_prediction": 1
+}
+```
+
+---
+
+
 ## Overview
 
 This project implements an end-to-end **fraud detection system** that predicts whether a financial transaction is fraudulent.
