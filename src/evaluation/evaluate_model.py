@@ -16,7 +16,7 @@ ARTIFACTS_DIR = os.path.join(BASE_DIR, "artifacts")
 
 def load_latest_model():
     """Load most recent trained model from artifacts"""
-    model_files = glob.glob(os.path.join(ARTIFACTS_DIR, "xgb_model_*.joblib"))
+    model_files = glob.glob(os.path.join(ARTIFACTS_DIR, "xgb_final_model_*.joblib"))
 
     if not model_files:
         raise FileNotFoundError("No trained model found in artifacts")
