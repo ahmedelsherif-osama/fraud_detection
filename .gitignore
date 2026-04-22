@@ -5,6 +5,7 @@ __pycache__/
 
 # Data & artifacts
 data/
+!src/data/
 *.csv
 
 # Jupyter
