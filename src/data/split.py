@@ -1,6 +1,5 @@
 import os
 import pandas as pd
-import glob
 from sklearn.model_selection import train_test_split
 from pathlib import Path
 from configs.config import RAW_DATA_DIR, SPLIT_DATA_DIR
@@ -14,13 +13,13 @@ INGESTED_DATASET_FILENAME = "creditcard_raw_*.csv"
 def split_dataset():
 
     os.makedirs(SPLIT_DATA_DIR, exist_ok=True)
+    raw_dir = Path(RAW_DATA_DIR)
 
-    files = glob.glob(os.path.join(RAW_DATA_DIR, INGESTED_DATASET_FILENAME))
+    files = list(raw_dir.glob(INGESTED_DATASET_FILENAME))
 
     if not files:
         raise FileNotFoundError("No versioned raw dataset found.")
 
-    raw_dir = Path(RAW_DATA_DIR)
     latest_file = max(raw_dir.iterdir(), key=os.path.getctime)
     logger.info(f"Using dataset: {latest_file}")
 
